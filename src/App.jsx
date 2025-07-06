@@ -26,21 +26,8 @@ const App = () => {
     <MainContent />
     <Footer />
     <div>
-      <h1>{myDog.name}</h1>
-      <h1>{myDog.type}</h1>
-      <h1>{myDog.breed}</h1>
-      <h1>{myCat.name}</h1>
-      <h1>{myCat.type}</h1>
-      <h1>{myCat.breed}</h1>
-      <h1>{myCat.breed ? myCat.breed : "No breed specified"}</h1>
-      <h1>{myDog.breed ? myDog.breed : "No breed specified"}</h1>
-      <h1>{myDog instanceof Dog ? "myDog is a Dog" : "myDog is not a Dog"}</h1>
-      <h1>{myCat instanceof Dog ? "myCat is a Dog" : "myCat is not a Dog"}</h1>
-      <h1>{myDog instanceof Animal ? "myDog is an Animal" : "myDog is not an Animal"}</h1>
-      <h1>{myCat instanceof Animal ? "myCat is an Animal" : "myCat is not an Animal"}</h1>
-      <h1>{myDog instanceof Object ? "myDog is an Object" : "myDog is not an Object"}</h1>
-      <h1>{myCat instanceof   Object ? "myCat is an Object" : "myCat is not an Object"}</h1>
-    </div>
+       <h1>New repo in react js</h1>
+      </div>
    </>
   )
 }
