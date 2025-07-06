@@ -3,31 +3,17 @@ import Footer from "./components/Footer"
 import MainContent from "./components/MainContent"
 
 const App = () => {
-    class Animal{
-      constructor(name , type){
-        this.name = name;
-        this.type = type;
-      }
-    }
 
-    class Dog extends Animal{
-      constructor(name,type,breed){
-        super(name,type);
-        this.breed = breed;
-    }
-  }
-
-  const myDog = new Dog("Buddy", "Dog", "Golden Retriever");
-  const myCat = new Animal("Whiskers", "Cat");
-
+  const myName = "Luffy"
+  const multipy = (a,b)=> a*b;
   return (
    <>
-    <Header />
-    <MainContent />
-    <Footer />
-    <div>
-       <h1>New repo in react js</h1>
-      </div>
+   {/* jsx is a javasacript content which is written in { } */}
+   <p>{2+2}</p>
+    <p>{myName}</p>
+    <p>My friend list {["Luffy","Zoro","Sanji","Thor"]}</p>
+        {/*we can also write function in jsx  */}
+        <p>2*10={multipy(2,10)}</p>
    </>
   )
 }
