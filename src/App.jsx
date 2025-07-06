@@ -1,6 +1,8 @@
 import Header from "./components/Header"
 import Footer from "./components/Footer"
 import MainContent from "./components/MainContent"
+import Greeting from "./components/greeting"
+import ProductInfo from "./components/ProductInfo"
 
 const App = () => {
 
@@ -8,13 +10,16 @@ const App = () => {
   const multipy = (a,b)=> a*b;
   return (
    <>
-   {/* jsx is a javasacript content which is written in { } */}
+   {/* jsx is a javasacript content which is written in { }
    <p>{2+2}</p>
     <p>{myName}</p>
     <p>My friend list {["Luffy","Zoro","Sanji","Thor"]}</p>
-        {/*we can also write function in jsx  */}
-        <p>2*10={multipy(2,10)}</p>
+        {/*we can also invoke function and classes in jsx  */}
+        {/*<p>2*10={multipy(2,10)}</p> */}
+        <Greeting/>
+        <ProductInfo/>
    </>
+
   )
 }
 
