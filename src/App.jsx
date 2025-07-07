@@ -3,6 +3,8 @@ import Footer from "./components/Footer"
 import MainContent from "./components/MainContent"
 import Greeting from "./components/greeting"
 import ProductInfo from "./components/ProductInfo"
+import UserList from "./components/userList"
+import Productlist from "./components/Productlist"
 
 const App = () => {
 
@@ -51,9 +53,28 @@ const App = () => {
             <h3>{user.email}</h3>
           </div>
         ))}
+        <UserList/>
+        <Productlist/>
+        {/* we can also write html in jsx */}
         <Footer/>
+
+        {/* Props 
+        Props are arguments passed into React components.
+        Props allows us to pass data from one component to another.
+        Props are passed to components via HTML attributes.
+        */}
+        <UserList name="Luffy" age={19}/>
    </>
 
+  )
+}
+
+const newApp =()=>{
+  return (
+    <div>
+      <h1>Hello World</h1>
+      <p>This is a new App component</p>
+    </div>
   )
 }
 
