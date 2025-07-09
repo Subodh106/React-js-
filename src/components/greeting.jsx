@@ -1,14 +1,19 @@
 import React from 'react'
 
-const greeting = () => {
-    const name = "John Doe"
-    const date = new Date()
+const Greeting = ({timeofDay}) => {
   return (
     <div>
-        <h1>{name}</h1>
-         <p>{date.toDateString()}</p> 
+        {
+          timeofDay==="morning" &&(
+            <h1>Good morning</h1>
+          )}
+        {
+          timeofDay==='afternoon'&&(
+            <h1>Good afternoon</h1>
+          )
+        }
     </div>
   )
 }
 
-export default greeting
+export default Greeting
