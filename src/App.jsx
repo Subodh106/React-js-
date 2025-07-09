@@ -5,6 +5,9 @@ import Product from "./components/Product"
 import Whether from "./components/whether"
 import UserStatus from "./components/UserStatus"
 import Greeting from "./components/greeting"
+import "./index.css"
+import { FaCartArrowDown } from "react-icons/fa";
+import StyleCard from "./components/StyleCard"
 
 const Validpassword =()=> <h1>Valid password</h1>
 const Invalidpassword =()=> <h1>Invalid password</h1>
@@ -87,7 +90,7 @@ const App = () => {
         <Password isvalid ={true}/>
         <Password isvalid ={false}/>
     
-          <h1>Cart 🛒</h1>
+          <h1>Cart <FaCartArrowDown /></h1>
           {cart.length >0 && <h1>You have {cart.length} in your Cart</h1>}
           {cart.length >0&&<ul>
             <h4>Product</h4>
@@ -102,6 +105,9 @@ const App = () => {
 
         {/*Inline css */}
         <h1 style={{color:"red",backgroundColor:"black",fontFamily:"sans-serif"}}>Inline style</h1>
+
+
+        <StyleCard />
    </>
   )
 }
