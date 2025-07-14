@@ -8,6 +8,7 @@ import Greeting from "./components/greeting"
 import "./index.css"
 import { FaCartArrowDown } from "react-icons/fa";
 import StyleCard from "./components/StyleCard"
+import UseState from "./components/useState"
 
 const Validpassword =()=> <h1>Valid password</h1>
 const Invalidpassword =()=> <h1>Invalid password</h1>
@@ -19,6 +20,32 @@ const Password = ({isValid})=> {
     return <Invalidpassword />
   }
 }
+
+
+ const Copy=()=>{
+
+  const handlecopy = (e)=>{
+    console.log("Text is copied");
+  }
+  return (
+    <p onCopy={handlecopy}>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor deleniti quasi quaerat distinctio dolores fugiat asperiores error voluptatem qui rem molestiae, delectus ratione iusto facere vitae voluptate, dolorum saepe itaque.
+    </p>
+  )
+ }
+
+
+ const Move =()=>{
+  const handlemove =()=>{
+    console.log("Mouse move event fired")
+  }
+  return (
+    <>
+      <p onMouseMove={handlemove} >Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius magnam qui itaque odio dolorem, veritatis perferendis hic cupiditate quod facilis error, repellendus velit vitae saepe, distinctio nesciunt! Ducimus, eligendi perferendis?</p>
+    </>
+  )
+ }
+
 
 const App = () => {
 
@@ -46,8 +73,13 @@ const App = () => {
 
   const cart =['Iphone', 'Macbook', 'iPad', 'Airpods', 'Apple Watch', 'Apple TV', 'HomePod', 'AirTag', 'Magic Mouse', 'Magic Keyboard']
   
-  
+  const handleClick =()=>{
+    console.log("Button is clicked")
+  }
 
+  const handlecopy =()=>{
+    console.log("Text is copied")
+  }
 
   return (
    <>
@@ -108,6 +140,31 @@ const App = () => {
 
 
         <StyleCard />
+
+        {/* Adding events  */}
+        <button onClick={()=>console.log(`Button is clicked`)} >click</button>
+        <button onClick={handleClick}>Functon btn</button>
+
+        <p onCopy={handlecopy}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur, veniam.</p>
+
+        <Copy />
+
+        {/* <Move /> */}
+
+        {/* STATE
+          State is a way to state and manage data that can change over time and affects how the component renders. We define state using the useState Hook, which allows you to set a initial value and provides a way to update that state.
+        */}
+
+        {/* HOOKS
+          Hooks are a new addition in React 16.8 . They let you use state and other React features without writing a class
+         */}
+
+        {/* useState Hook 
+            UseState Hook allows us to track state in functional component. State generally refers to data or properties that needs to be tracking in an application
+
+            const[variable which store value in state , function to update the value in state] = useState(initialValue)
+        */}
+        <UseState/>
    </>
   )
 }
